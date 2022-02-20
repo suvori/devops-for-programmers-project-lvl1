@@ -13,7 +13,8 @@
 ```sh
 # run tests
 $ make ci
-
+```
+```sh
 # start application
 $ make start
 ```
