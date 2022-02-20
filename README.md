@@ -1,14 +1,15 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/suvori/devops-for-programmers-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/suvori/devops-for-programmers-project-lvl1/actions)
 
-### CI, build and push to DockerHub status:
 ![Actions Status](https://github.com/suvori/devops-for-programmers-project-lvl1/actions/workflows/push.yml/badge.svg)
 
-### Required
+### Требования 
+
 * docker
 * docker compose
 
-### CI and run
+### Команды
+
 ```sh
 # run tests
 $ make ci
@@ -17,6 +18,6 @@ $ make ci
 $ make start
 ```
 
-### Docker hub image
+### Docker Hub
 
-[Docker hub image](https://hub.docker.com/repository/docker/asuvorina/devops-for-programmers-project-lvl1)
+[asuvorina/devops-for-programmers-project-lvl1](https://hub.docker.com/repository/docker/asuvorina/devops-for-programmers-project-lvl1)
