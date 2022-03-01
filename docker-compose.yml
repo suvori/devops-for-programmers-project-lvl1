@@ -13,7 +13,7 @@ services:
       - DATABASE_NAME=${DATABASE_NAME}
       - DATABASE_USERNAME=${DATABASE_USERNAME}
       - DATABASE_PASSWORD=${DATABASE_PASSWORD}
-    command: bash -c "sleep 3 && npm test"
+    command: bash -c "npm test"
     depends_on:
       - db
   
@@ -24,6 +24,11 @@ services:
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
       - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "${DATABASE_USERNAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
       
 volumes:
   pgdata:
