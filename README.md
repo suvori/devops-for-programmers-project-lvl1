@@ -8,15 +8,35 @@
 * docker
 * docker compose
 
+### Конфигурация
+
+Необходимые переменные окружения можно задать в файле app/.env 
+
+```sh
+# create .env file
+$ make init-env
+```
+
 ### Команды
 
 ```sh
-# run tests
+# запуск тестов
 $ make ci
-```
-```sh
-# start application
+
+# сборка образа
+$ make build
+
+# обновление образа на Docker Hub
+$ make push
+
+# запуск приложения
 $ make start
+
+# сборка образа для dev режима
+$ make build-dev
+
+# запуск приложения в dev режиме
+$ make start-dev
 ```
 
 ### Docker Hub
