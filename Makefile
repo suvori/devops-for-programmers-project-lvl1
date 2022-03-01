@@ -20,4 +20,5 @@ build-dev:
 start-dev:
 	docker-compose run app npm run dev
 	
-
+clean:
+	docker-compose down --volumes
